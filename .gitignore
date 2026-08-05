@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Ecommerce/Services/Catalog/Catalog.API/bin/Debug/net10.0
+/Ecommerce/Services/Catalog/Catalog.API/obj
+/Ecommerce/Services/Catalog/Catalog.Application/bin/Debug/net10.0
+/Ecommerce/Services/Catalog/Catalog.Application/Catalog.Application.csproj
+/Ecommerce/Services/Catalog/Catalog.Application/obj
+/Ecommerce/Services/Catalog/Catalog.Application/Class1.cs
+/Ecommerce/Services/Catalog/Catalog.Core/bin/Debug/net10.0
+/Ecommerce/Services/Catalog/Catalog.Core/Catalog.Core.csproj
+/Ecommerce/Services/Catalog/Catalog.Core/obj
+/Ecommerce/Services/Catalog/Catalog.Infrastructure/bin/Debug/net10.0
+/Ecommerce/Services/Catalog/Catalog.Infrastructure/obj
+/Ecommerce/Services/Catalog/Catalog.Infrastructure/obj/Catalog.Infrastructure.csproj.nuget.dgspec.json
+/Ecommerce/.vs
