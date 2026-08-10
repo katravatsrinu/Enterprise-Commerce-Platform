@@ -8,18 +8,21 @@ namespace Catalog.Infrastructure.Repositories
 {
     public class BrandRepository : IBrandRepository
     {
+        private readonly IMongoCollection<ProductBrand> _brands;
         public BrandRepository(IConfiguration config)
         {
             var client = new MongoClient(config["DatabaseSettings:ConnectionString"]);
+            var db = client.GetDatabase(config["DatabaseSettings:DatabaseName"]);
+            _brands = db.GetCollection<ProductBrand>(config["DatabaseSettings:BrandCollectionName"]);
         }
-        public Task<IEnumerable<ProductBrand>> GetAllBrands()
+        public async Task<IEnumerable<ProductBrand>> GetAllBrands()
         {
-            throw new NotImplementedException();
+            return await _brands.Find(_ => true).ToListAsync();
         }
 
-        public Task<ProductBrand> GetBrandById(int id)
+        public async Task<ProductBrand> GetBrandById(string id)
         {
-            throw new NotImplementedException();
+            return await _brands.Find(x =>  x.Id == id).FirstOrDefaultAsync();
         }
     }
 }

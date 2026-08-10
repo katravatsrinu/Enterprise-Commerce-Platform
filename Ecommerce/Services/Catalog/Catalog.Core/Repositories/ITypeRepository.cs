@@ -5,6 +5,6 @@ namespace Catalog.Core.Repositories
     public interface ITypeRepository
     {
         Task<IEnumerable<ProductType>> GetAllProductTypes();
-        Task<ProductType> GetProductTypeById(int id);
+        Task<ProductType> GetProductTypeById(string id);
     }
 }
