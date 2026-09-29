@@ -10,8 +10,6 @@ namespace Catalog.Infrastructure.Data
             IMongoDatabase database,
             string seedDataPath)
         {
-            Console.WriteLine("DATABASE SEEDER STARTED");
-
             var brandsCollection =
                 database.GetCollection<ProductBrand>("ProductBrands");
 

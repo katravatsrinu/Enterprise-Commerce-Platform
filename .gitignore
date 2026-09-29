@@ -16,3 +16,11 @@
 /Ecommerce/Services/Catalog/Catalog.Infrastructure/obj/Catalog.Infrastructure.csproj.nuget.dgspec.json
 /Ecommerce/.vs
 /.vs
+/Ecommerce/Services/Discount/Discount.API/bin/Debug/net10.0
+/Ecommerce/Services/Discount/Discount.API/obj
+/Ecommerce/Services/Discount/Discount.Application/obj
+/Ecommerce/Services/Discount/Discount.Core/obj
+/Ecommerce/Services/Discount/Discount.Core/bin/Debug/net10.0
+/Ecommerce/Services/Discount/Discount.Infrastructure/bin/Debug/net10.0
+/Ecommerce/Services/Discount/Discount.Infrastructure/obj
+/Ecommerce/Services/Discount/Discount.Application/bin/Debug/net10.0
