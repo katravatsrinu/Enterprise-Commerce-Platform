@@ -71,9 +71,21 @@ namespace Catalog.API.Controllers
         }
 
         [HttpPost("products")]
-        public async Task<IActionResult> CreateProduct([FromBody] CreateProductDto product)
+        public async Task<IActionResult> CreateProduct(
+    [FromBody] CreateProductDto product)
         {
-            var result = await _mediator.Send(new CreateProductCommand(product));
+            var command = new CreateProductCommand
+            {
+                Name = product.Name,
+                Summary = product.Summary,
+                Description = product.Description,
+                ImageFile = product.ImageFile,
+                BrandId = product.BrandId,
+                TypeId = product.TypeId,
+                Price = decimal.Parse(product.PriceId)
+            };
+
+            var result = await _mediator.Send(command);
 
             return Ok(result);
         }

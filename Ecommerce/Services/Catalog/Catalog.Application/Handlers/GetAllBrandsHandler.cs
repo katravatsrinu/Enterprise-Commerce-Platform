@@ -6,7 +6,8 @@ using MediatR;
 
 namespace Catalog.Application.Handlers
 {
-    public record GetAllBrandsHandler : IRequestHandler<GetAllBrandsQuery, IList<BrandResponse>>
+    public class GetAllBrandsHandler
+        : IRequestHandler<GetAllBrandsQuery, List<BrandResponse>>
     {
         private readonly IBrandRepository _brandRepository;
 
@@ -15,10 +16,13 @@ namespace Catalog.Application.Handlers
             _brandRepository = brandRepository;
         }
 
-        public async Task<IList<BrandResponse>> Handle(GetAllBrandsQuery request, CancellationToken cancellationToken)
+        public async Task<List<BrandResponse>> Handle(
+            GetAllBrandsQuery request,
+            CancellationToken cancellationToken)
         {
             var brandList = await _brandRepository.GetAllBrands();
-            return brandList.ToResponseList();
+
+            return brandList.ToResponseList().ToList();
         }
     }
 }
