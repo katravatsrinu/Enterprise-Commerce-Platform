@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data\Seeddata\brands.json" />
+    <Content Remove="Data\Seeddata\products.json" />
+    <Content Remove="Data\Seeddata\types.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\Seeddata\brands.json" />
+    <None Include="Data\Seeddata\products.json" />
+    <None Include="Data\Seeddata\types.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
   </ItemGroup>

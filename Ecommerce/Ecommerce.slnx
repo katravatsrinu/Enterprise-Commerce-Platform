@@ -6,4 +6,10 @@
     <Project Path="Services/Catalog/Catalog.Core/Catalog.Core.csproj" Id="2b34a38c-0aba-4cb5-9f8d-0ab259305e4d" />
     <Project Path="Services/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" Id="af57b160-9359-4e54-93bb-22da68749001" />
   </Folder>
+  <Folder Name="/Services/Discount/">
+    <Project Path="Services/Discount/Discount.API/Discount.API.csproj" Id="8a572af5-0ac2-44c1-8805-539abb8f7e44" />
+    <Project Path="Services/Discount/Discount.Application/Discount.Application.csproj" Id="753ffbee-2099-45fc-98e2-4d67cca294c3" />
+    <Project Path="Services/Discount/Discount.Core/Discount.Core.csproj" Id="78b61e91-4b71-4bee-8035-c51e8fbfbf0f" />
+    <Project Path="Services/Discount/Discount.Infrastructure/Discount.Infrastructure.csproj" Id="4fddcc1b-c4fb-41f7-9ed8-4c44950cca06" />
+  </Folder>
 </Solution>
