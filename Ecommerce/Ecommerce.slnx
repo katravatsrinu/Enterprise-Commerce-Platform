@@ -12,4 +12,10 @@
     <Project Path="Services/Discount/Discount.Core/Discount.Core.csproj" Id="78b61e91-4b71-4bee-8035-c51e8fbfbf0f" />
     <Project Path="Services/Discount/Discount.Infrastructure/Discount.Infrastructure.csproj" Id="4fddcc1b-c4fb-41f7-9ed8-4c44950cca06" />
   </Folder>
+  <Folder Name="/Services/Ordering/">
+    <Project Path="Services/Ordering/Ordering.API/Ordering.API.csproj" Id="fd480da3-f8ff-4fd6-a5b2-f6360baca601" />
+    <Project Path="Services/Ordering/Ordering.Application/Ordering.Application.csproj" Id="72d85146-22e5-4421-8fdb-1c58f7edee6a" />
+    <Project Path="Services/Ordering/Ordering.Core/Ordering.Core.csproj" Id="c5204863-6657-4061-8eac-6521d20615c6" />
+    <Project Path="Services/Ordering/Ordering.Infrastructure/Ordering.Infrastructure.csproj" Id="10ccc956-bee7-4511-b015-7ce408498ec3" />
+  </Folder>
 </Solution>
