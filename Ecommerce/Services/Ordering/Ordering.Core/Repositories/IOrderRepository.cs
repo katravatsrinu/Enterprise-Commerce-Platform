@@ -9,5 +9,6 @@ namespace Ordering.Core.Repositories
         Task<Order> CreateOrder(Order order);
         Task<bool> UpdateOrder(Order order);
         Task<bool> DeleteOrder(int id);
+        Task<Order> CreateOrderWithOutbox(Order order,OutboxMessage outboxMessage);
     }
 }

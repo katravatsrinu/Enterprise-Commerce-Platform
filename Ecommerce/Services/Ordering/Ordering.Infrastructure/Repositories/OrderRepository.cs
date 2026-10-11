@@ -53,5 +53,41 @@ namespace Ordering.Infrastructure.Repositories
 
             return await _context.SaveChangesAsync() > 0;
         }
+
+        public async Task<Order> CreateOrderWithOutbox(
+    Order order,
+    OutboxMessage outboxMessage)
+        {
+            await using var transaction =
+                await _context.Database.BeginTransactionAsync();
+
+            try
+            {
+                _context.Orders.Add(order);
+                await _context.SaveChangesAsync();
+
+                outboxMessage.Content =
+                    System.Text.Json.JsonSerializer.Serialize(new
+                    {
+                        order.Id,
+                        order.UserName,
+                        order.TotalPrice,
+                        order.OrderDate,
+                        Status = order.Status.ToString()
+                    });
+
+                _context.OutboxMessages.Add(outboxMessage);
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                return order;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+        }
     }
 }
